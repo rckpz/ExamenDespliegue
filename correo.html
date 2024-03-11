@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO = Básico -->
+    <!-- Cada página del sitio tiene que ser diferente el título y la descripción -->
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
+    <meta property="og:title" content="Título de tu página" />
+    <meta property="og:description" content="Descripción de tu página" />
+    <meta
+      property="og:image"
+      content="URL de la imagen que quieres mostrar en las redes sociales"
+    />
+    <meta property="og:url" content="URL de tu página" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Título de tu página" />
+    <meta name="twitter:description" content="Descripción de tu página" />
+    <meta
+      name="twitter:image"
+      content="URL de la imagen que quieres mostrar en Twitter"
+    />
+
+    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- icono de acceso para IOS -->
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
+
+    <!-- links de estilos -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Se cambia el tema de algunos navegadores -->
+    <meta name="theme-color" content="#fafafa" />
+    <!-- Código de las plataformas de Análisis -->
+    <script></script>
+    <!-- Scripts a cargar antes de la renderización -->
+    <script src="preloader.js"></script>
+  </head>
+  <body>
+    <section class="correo">
+      <h1 class="titulocorreo">¡Tu código de descuento del 50% está aquí!</h1>
+      <p class="textocorreo">
+        ¡Hola [Nombre]! <br />
+        <br />¡Gracias por tu interés en nuestro curso de diseño en Figma! Como
+        agradecimiento, te ofrecemos un descuento exclusivo del 50% para que
+        puedas comenzar tu viaje de aprendizaje hoy mismo. <br /><br />
+
+        Código de descuento: [Código de descuento] <br /><br />
+        Este código es válido por un tiempo limitado!. Asegúrate de utilizarlo
+        antes de que expire en :
+      </p>
+      <div id="contador"></div>
+      <a href="#" class="quiero">LO QUIERO!</a>
+    </section>
+    <script>
+      // Función para mostrar el contador regresivo
+      function mostrarContador() {
+        // Obtener la fecha y hora actual
+        const ahora = new Date().getTime();
+
+        // Calcular la fecha y hora de dentro de 24 horas
+        const futuro = ahora + 24 * 60 * 60 * 1000; // 24 horas * 60 minutos * 60 segundos * 1000 milisegundos
+
+        // Actualizar el contador cada segundo
+        const intervalo = setInterval(function () {
+          // Obtener la fecha y hora actual en cada iteración
+          const ahora = new Date().getTime();
+
+          // Calcular la diferencia de tiempo entre el futuro y el presente
+          const diferencia = futuro - ahora;
+
+          // Calcular las horas, minutos y segundos restantes
+          const horas = Math.floor(
+            (diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutos = Math.floor(
+            (diferencia % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+          // Mostrar el contador en el elemento con id "contador"
+          document.getElementById(
+            "contador"
+          ).innerHTML = `${horas} : ${minutos} : ${segundos}`;
+
+          // Si la cuenta regresiva llega a cero, detener el intervalo
+          if (diferencia < 0) {
+            clearInterval(intervalo);
+            document.getElementById("contador").innerHTML = "Expirado";
+          }
+        }, 1000); // Actualizar cada segundo
+      }
+
+      // Llamar a la función para iniciar el contador al cargar la página
+      mostrarContador();
+    </script>
+  </body>
+</html>

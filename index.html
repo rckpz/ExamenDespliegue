@@ -34,7 +34,7 @@
 
     <!-- links de estilos -->
     <link rel="stylesheet" href="css/style.css" />
-    
+
     <!-- Se cambia el tema de algunos navegadores -->
     <meta name="theme-color" content="#fafafa" />
     <!-- Código de las plataformas de Análisis -->
@@ -44,26 +44,86 @@
   </head>
   <body>
     <div id="container">
-      <!-- *** ESTRUCTURA SEMÁNTICA *** -->
-      <!-- Header (encabezado de la página, zona superior) -->
       <header>
-        <!-- nav (el navegador de toda la web) -->
+        <h1 class="logo">Best Design</h1>
         <nav>
-          <a href="" class="link1">link1</a>
-          <a href="" class="link2">link2</a>
-          <a href="" class="link3">link3</a>
-          <a href="" class="link4">link4</a>
+          <a href="#" class="inicio-boton"> Inicio</a>
+          <a href="#ventajas" class="ventajas-boton">Ventajas</a>
+          <a href="#inscribir" class="inscribirme-boton"> INSCRIBIRME </a>
         </nav>
       </header>
-      <!-- Main (centro de la página, zona central) -->
       <main>
-        <!-- section y article (posibilidades dentro de main) -->
+        <h1 class="eslogan">
+          Aprende a usar figma como un experto en sólo 10 horas con este curso
+          totalmente online!
+        </h1>
+        <h3 class="frase">A tan sólo 99 €, pon a prueba tu potencial.</h3>
+        <img src="svg/Figma.svg" alt="" class="figma" />
+        <p class="main-texto">
+          Lorem ipsum dolor sit amet consectetur. Velit donec consequat dolor
+          tortor egestas. Integer nisi lacinia lectus scelerisque vitae morbi
+          eget. Non ac massa magna tincidunt ipsum aliquam. Dui fermentum odio
+          commodo tellus ut augue purus at. Augue malesuada congue semper risus
+          molestie. Augue enim egestas viverra aliquam magna. Imperdiet
+          dignissim fringilla lectus ac hac sagittis. In habitant pulvinar vel
+          dolor fermentum tincidunt turpis ut dignissim.
+        </p>
       </main>
-      <!-- Footer (final de la página, zona inferior) -->
+      <section class="ventajas" id="ventajas">
+        <h1 class="ventajas-texto">VENTAJAS DE USAR NUESTRO CURSO:</h1>
+        <figure class="figuras">
+          <div class="ventaja1">
+            <img src="svg/Estrella.svg" alt="" class="estrella" />
+            <p class="ventaja1-texto">
+              Lorem ipsum dolor sit amet consectetur. Tortor laoreet adipiscing
+              nunc in erat at mattis adipiscing. Sodales quisque purus massa
+              ornare egestas tortor. Sed adipiscing donec interdum mauris
+              viverra fermentum vitae. Risus nunc.
+            </p>
+          </div>
+          <div class="ventaja2">
+            <img src="svg/Euro.svg" alt="" class="euro" />
+            <p class="ventaja2-texto">
+              Lorem ipsum dolor sit amet consectetur. Tortor laoreet adipiscing
+              nunc in erat at mattis adipiscing. Sodales quisque purus massa
+              ornare egestas tortor. Sed adipiscing donec interdum mauris
+              viverra fermentum vitae. Risus nunc.
+            </p>
+          </div>
+          <div class="ventaja3">
+            <img src="svg/Trofeo.svg" alt="" class="trofeo" />
+            <p class="ventaja3-texto">
+              Lorem ipsum dolor sit amet consectetur. Tortor laoreet adipiscing
+              nunc in erat at mattis adipiscing. Sodales quisque purus massa
+              ornare egestas tortor. Sed adipiscing donec interdum mauris
+              viverra fermentum vitae. Risus nunc.
+            </p>
+          </div>
+        </figure>
+      </section>
+      <section class="promo" id="inscribir">
+        <h1 class="promocion">SOLO POR HOY !</h1>
+        <h3 class="promo-frase">
+          INTRODUCE TU EMAIL PARA RECIBIR UN CÓDIGO CON EL 50% DE DESCUENTO !
+        </h3>
+        <form action="#" class="formulario">
+          <input
+            class="email-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Introduce tu email"
+          />
+          <a href="correo.html" class="enviar">Enviar</a>
+        </form>
+      </section>
       <footer>
-        <h6>&copy;Copyright</h6>
+        <p class="copy">© 2024 Best Design. Todos los derechos reservados.</p>
+        <p class="politicayterminos">
+          Política de Privacidad | Términos y Condiciones
+        </p>
+        <p class="email">Email: erickdev268@gmail.com</p>
       </footer>
     </div>
-
   </body>
 </html>

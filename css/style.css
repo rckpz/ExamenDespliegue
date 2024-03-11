@@ -8,12 +8,277 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Roboto";
+  src: url("../font/robotowebfont.woff2") format("woff2"),
+    url("../font/robotowebfont.woff") format("woff");
 }
 
 /* ******************************** */
 
 /* Colores */
+:root {
+  --color-basico-color-blanco: #ffffff;
+  --color-basico-color-blanco-2: #f3f3f3;
+  --color-basico-color-negro: #000000;
+  --color-basico-color-negro-2: #262626;
+  --color-paleta-landing-color-amarillo-pastel: #fccc54;
+  --color-paleta-landing-color-hueso: #e5d8bf;
+  --color-paleta-landing-color-naranja: #f05613;
+  /* numbers */
+  --size-grid-grid-width: 120rem;
+  --size-scale-size-3: 0.75rem;
+  --size-scale-size-8: 2rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  width: 100%;
+  height: 270vh;
+  background-color: #4d69f1;
+  font-family: "Roboto";
+}
 
-/* ******************************** */
+a {
+  text-decoration: none;
+  color: var(--color-basico-color-negro);
+  cursor: pointer;
+}
+
+header {
+  display: grid;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  padding: 48px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.logo {
+  color: var(--Color-Basico-Color-Negro, #000);
+
+  /* Shadow Header */
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* H1 Text */
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+header nav {
+  grid-column: 5/-1;
+  font-size: 36px;
+}
+header nav a {
+  margin-left: 24px;
+  padding: 12px;
+}
+.inscribirme-boton {
+  background-color: var(--color-basico-color-blanco-2);
+  border-radius: 12px;
+}
+.inscribirme-boton :hover {
+  background-color: var(--color-paleta-landing-color-hueso);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -60px;
+  grid-column: 2/6;
+  grid-row: 2/7;
+  padding: 48px;
+  gap: 40px;
+}
+.eslogan {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: justify;
+  color: var(--color-basico-color-blanco);
+}
+.frase {
+  font-size: 48px;
+  font-weight: bold;
+}
+.main-texto {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-basico-color-negro-2);
+  text-align: justify;
+}
+.ventajas {
+  background-color: var(--color-paleta-landing-color-hueso);
+  grid-row: 7/12;
+  grid-column: 1/-1;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.ventajas-texto {
+  font-size: 48px;
+  font-weight: bold;
+}
+.figuras {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-align: justify;
+  justify-content: center;
+  width: 100%;
+  gap: 200px;
+}
+.ventaja1-texto,
+.ventaja2-texto,
+.ventaja3-texto {
+  margin-top: 40px;
+  width: 260px;
+}
+.ventaja1,
+.ventaja3 {
+  margin-top: -260px;
+}
+.promo {
+  background-color: var(--color-paleta-landing-color-amarillo-pastel);
+  grid-row: 12/14;
+  grid-column: 1/-1;
+  padding: 48px;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-direction: column;
+}
+.promocion {
+  color: var(--Color-Basico-Color-Blanco, #fff);
+  text-align: justify;
+
+  /* Titulo llamativo */
+  font-family: Roboto;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.promo-frase {
+  color: var(--Color-Basico-Color-Negro, #000);
+  text-align: justify;
+
+  /* H2 Text */
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.formulario {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+.email-input {
+  display: flex;
+  width: 1200.6px;
+  height: 118.8px;
+  padding: 38.7px 1026.9px 36.9px 41.4px;
+  align-items: flex-start;
+  gap: 33.1px;
+  border-radius: var(--Size-Scale-Size-8, 28.8px);
+  background: var(--Color-Basico-Color-Blanco, #fff);
+}
+.enviar {
+  display: flex;
+  padding: 9px;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border-radius: var(--Size-Scale-Size-3, 10.8px);
+  background: var(--Color-Basico-Color-Blanco-2, #f3f3f3);
+  padding: 0px 20px;
+  height: 56px;
+  border-radius: var(--Size-Scale-Size-3, 10.8px);
+  font-size: 32.4px;
+  line-height: normal;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 280px;
+  background-color: var(--color-paleta-landing-color-amarillo-pastel);
+  grid-row: 14/-1;
+  grid-column: 1/-1;
+  padding: 48px;
+}
+.copy,
+.politicayterminos,
+.email {
+  cursor: pointer;
+}
+.correo {
+  background: var(--Color-Paleta-landing-Color-Hueso, #e5d8bf);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+}
+.titulocorreo {
+  color: var(--Color-Basico-Color-Negro, #000);
+  text-align: justify;
+
+  /* Titulo llamativo */
+  font-family: Roboto;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 1282px;
+}
+.textocorreo {
+  width: 1100px;
+  color: var(--Color-Basico-Color-Negro, #000);
+  text-align: justify;
+
+  /* Parragraph Text */
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#contador {
+  color: var(--Color-Paleta-landing-Color-Naranja, #f05613);
+  text-align: justify;
+
+  /* Contador */
+  font-family: Roboto;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.quiero {
+  display: flex;
+  width: 207px;
+  height: 62px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--Color-Basico-Color-Negro, #000);
+
+  /* Boton */
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: var(--Size-Scale-Size-3, 12px);
+  background: var(--Color-Basico-Color-Blanco-2, #f3f3f3);
+}
